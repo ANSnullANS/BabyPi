@@ -1,0 +1,14 @@
+[Unit]
+Description=Picam Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/baby/babypi-ctrl/run.sh
+User=baby
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=picam
+
+[Install]
+WantedBy=multi-user.target

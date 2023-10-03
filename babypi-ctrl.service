@@ -1,0 +1,13 @@
+[Unit]
+Description=BabyPi Controller Service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -u /home/baby/babypi-ctrl/babypi-ctrl.py
+User=baby
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=babypi-ctrl
+
+[Install]
+WantedBy=multi-user.target
